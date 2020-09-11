@@ -1,3 +1,6 @@
+//Sourcecode
+//https://github.com/ProyectoMasZ/ProyectoMasZ.github.io
+//Autores: Rodrigo Calderón, Daniel Sanchez, Juan Nieve
 
 //declarar las variables de nuestra app. 
 var scene, camera, renderer, clock, deltaTime, totalTime;
