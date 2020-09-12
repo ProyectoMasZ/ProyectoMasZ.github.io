@@ -1,21 +1,12 @@
 # Rhino
-newmtl Mulch brown
-Ka 0.0000 0.0000 0.0000
-Kd 1.0000 1.0000 1.0000
-Ks 1.0000 1.0000 1.0000
-Tf 0.0000 0.0000 0.0000
-d 1.0000
-Ns 0.0000
-map_Kd Mulch brown_500_DB.jpg
-map_Bump Mulch brown_500_DB.jpg
-newmtl _plant_2_apg_
+newmtl verde1
 Ka 0.0000 0.0000 0.0000
 Kd 0.8000 0.8000 0.8000
 Ks 0.8000 0.8000 0.8000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
-Ns 63.7500
-map_Kd _plant_2_apg_.png
+Ns 162.5625
+map_Kd verde1.png
 newmtl Bark brown
 Ka 0.0000 0.0000 0.0000
 Kd 1.0000 1.0000 1.0000
@@ -25,3 +16,12 @@ d 1.0000
 Ns 0.0000
 map_Kd Bark brown_150_DB.jpg
 map_Bump Bark brown_150_DB.jpg
+newmtl Mulch brown
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0.0000
+map_Kd Mulch brown_500_DB.jpg
+map_Bump Mulch brown_500_DB.jpg

@@ -1,36 +1,19 @@
 # Rhino
-newmtl Bark brown
+newmtl verde
 Ka 0.0000 0.0000 0.0000
-Kd 1.0000 1.0000 1.0000
-Ks 1.0000 1.0000 1.0000
+Kd 0.8000 0.8000 0.8000
+Ks 0.8000 0.8000 0.8000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
-Ns 0.0000
-map_Kd Bark brown_150_DB.jpg
-map_Bump Bark brown_150_DB.jpg
+Ns 162.5625
+map_Kd rdk$0200-0200-256AD27A.png
 newmtl Plastic
 Ka 0.0000 0.0000 0.0000
-Kd 0.8863 0.0588 0.0980
+Kd 0.8863 0.0549 0.0941
 Ks 0.0000 0.0000 0.0000
 Tf 0.0000 0.0000 0.0000
 d 1.0000
-Ns 255.0000
-newmtl _plant_2_apg_
-Ka 0.0000 0.0000 0.0000
-Kd 0.8000 0.8000 0.8000
-Ks 0.8000 0.8000 0.8000
-Tf 0.0000 0.0000 0.0000
-d 1.0000
-Ns 63.7500
-map_Kd _plant_2_apg_.png
-newmtl _plant_2a_apg_
-Ka 0.0000 0.0000 0.0000
-Kd 0.8000 0.8000 0.8000
-Ks 0.8000 0.8000 0.8000
-Tf 0.0000 0.0000 0.0000
-d 1.0000
-Ns 63.7500
-map_Kd _plant_2a_apg_.png
+Ns 65.0250
 newmtl Mulch brown
 Ka 0.0000 0.0000 0.0000
 Kd 1.0000 1.0000 1.0000
@@ -40,3 +23,19 @@ d 1.0000
 Ns 0.0000
 map_Kd Mulch brown_500_DB.jpg
 map_Bump Mulch brown_500_DB.jpg
+newmtl _plant_2_apg_
+Ka 0.0000 0.0000 0.0000
+Kd 0.8000 0.8000 0.8000
+Ks 0.8000 0.8000 0.8000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 162.5625
+newmtl Bark brown
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0.0000
+map_Kd Bark brown_150_DB.jpg
+map_Bump Bark brown_150_DB.jpg
