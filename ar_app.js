@@ -391,7 +391,7 @@ function init() {
 
     let geo10 = new THREE.PlaneBufferGeometry(4,4.5,4,4);
         let loader10 = new THREE.TextureLoader();
-        let textura10 = loader10.load('images/logo.jpg');
+        let textura10 = loader10.load('images/logo.png');
         let material10 = new THREE.MeshBasicMaterial({map:textura10});
 
         let meshLogo = new THREE.Mesh(geo10,material10);
