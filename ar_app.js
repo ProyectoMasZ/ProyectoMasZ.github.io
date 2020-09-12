@@ -191,6 +191,109 @@ function init() {
         type: 'pattern', patternUrl: 'data/pattern-v1.patt',
     });
 
+/////// Marker Setup Geometries
+
+    //Marcador 1
+    marker1 = new THREE.Group();
+    marker1.name = 'marker1';
+    scene.add(marker1); //agregamos el marcador a la escena 
+
+    let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, marker1, {
+        type: 'pattern',
+        patternUrl: "data/tc4.patt",
+    })
+
+    //Marcador 2
+    marker2 = new THREE.Group();
+    marker2.name = 'marker2';
+    scene.add(marker2); //agregamos el marcador a la escena 
+
+    let markerControls2 = new THREEx.ArMarkerControls(arToolkitContext, marker2, {
+        type: 'pattern',
+        patternUrl: "data/tc1.patt",
+    })
+
+    //Marcador 3
+    marker3 = new THREE.Group();
+    marker3.name = 'marker3';
+    scene.add(marker3); //agregamos el marcador a la escena 
+    
+    let markerControls3 = new THREEx.ArMarkerControls(arToolkitContext, marker3, {
+        type: 'pattern',
+        patternUrl: "data/tc2.patt",
+    })
+    
+    
+    //Marcador 4
+    marker4 = new THREE.Group();
+    marker4.name = 'marker4';
+    scene.add(marker4); //agregamos el marcador a la escena 
+
+    let markerControls4 = new THREEx.ArMarkerControls(arToolkitContext, marker4, {
+        type: 'pattern',
+        patternUrl: "data/tc3.patt",
+    })
+
+    //Marcador 5
+    marker5 = new THREE.Group();
+    marker5.name = 'marker5';
+    scene.add(marker5); //agregamos el marcador a la escena 
+    
+    let markerControls5 = new THREEx.ArMarkerControls(arToolkitContext, marker5, {
+        type: 'pattern',
+        patternUrl: "data/m1.patt",
+    })
+
+    //Marcador 6
+    marker6 = new THREE.Group();
+    marker6.name = 'marker6';
+    scene.add(marker6); //agregamos el marcador a la escena 
+    
+    let markerControls6 = new THREEx.ArMarkerControls(arToolkitContext, marker6, {
+        type: 'pattern',
+        patternUrl: "data/op1.patt",
+    })
+    
+    //Marcador 7
+    marker7 = new THREE.Group();
+    marker7.name = 'marker7';
+    scene.add(marker7); //agregamos el marcador a la escena 
+    
+    let markerControls7 = new THREEx.ArMarkerControls(arToolkitContext, marker7, {
+        type: 'pattern',
+        patternUrl: "data/op2.patt",
+    })
+
+    //Marcador 8
+    marker8 = new THREE.Group();
+    marker8.name = 'marker';
+    scene.add(marker8); //agregamos el marcador a la escena 
+
+    let markerControls8 = new THREEx.ArMarkerControls(arToolkitContext, marker8, {
+        type: 'pattern',
+        patternUrl: "data/op3.patt",
+    })
+
+    //Marcador 9
+    marker9 = new THREE.Group();
+    marker9.name = 'marker';
+    scene.add(marker9); //agregamos el marcador a la escena 
+    
+    let markerControls9 = new THREEx.ArMarkerControls(arToolkitContext, marker9, {
+        type: 'pattern',
+        patternUrl: "data/ip1.patt",
+    })
+
+    //Marcador 10
+    marker10 = new THREE.Group();
+    marker10.name = 'marker';
+    scene.add(marker10); //agregamos el marcador a la escena 
+
+    let markerControls10 = new THREEx.ArMarkerControls(arToolkitContext, marker10, {
+        type: 'pattern',
+        patternUrl: "data/ip2.patt",
+    })
+
 
     ////////////////////////////////////////////////
     //Creacion de geometrias - Imagenes
@@ -317,6 +420,282 @@ function init() {
 
         markerVideo.add(meshVideo);
 
+      ///////////////////////////////////
+    //GEOMETRY
+    /////////////////////////////////////////////////
+
+    //Creo una geometria cubo
+    let geoc1 = new THREE.CubeGeometry(.75, .75, .75); // crear la plantilla
+    //creo material 
+    let materialc1 = new THREE.MeshLambertMaterial({ color: Math.random() * 0xffffff }); //creamos el material 
+
+    //Creo una geometria 
+    let geoc2 = new THREE.CubeGeometry(.75, .75, .75); // crear la plantilla
+    //creo material 
+    let materialc2 = new THREE.MeshLambertMaterial({ color: Math.random() * 0xffffff }); //creamos el material
+
+    //////////////MESH1//////////////////////////////////////////
+    // //creo un mesh con la geometria y el material 
+    // mesh1 = new THREE.Mesh(geo1, material1); //nuestro mesh 
+    // //CAMBIO LA POSICION DE MI MESH 
+    // mesh1.position.y = 0.5;
+    // mesh1.position.z = -0.3;
+
+    // //activo el recibir y proyectar sombras en otros meshes
+    // mesh1.castShadow = true;
+    // mesh1.receiveShadow = true;
+
+    // //////////////MESH2//////////////////////////////////////////
+    // //creo un mesh con la geometria y el material 
+    // mesh2 = new THREE.Mesh(geo2, material2); //nuestro mesh 
+    // //CAMBIO LA POSICION DE MI MESH 
+    // mesh2.position.x = 0.75;
+    // mesh2.position.y = 1.0;
+    // //activo el recibir y proyectar sombras en otros meshes
+    // mesh2.castShadow = true;
+    // mesh2.receiveShadow = true;
+
+
+    //markerRoot1.add(mesh1); //esta linea agrega el cubo a mi grupo y finalmente se puede ver en la escena 
+    //markerRoot1.add(mesh2); //agregando el mesh 2 a mi escena
+
+    ////////////////////PISO////////////////
+    let floorGeometry = new THREE.PlaneGeometry(20, 20);
+    let floorMaterial = new THREE.ShadowMaterial();
+    floorMaterial.opacity = 0.25;
+
+    let floorMesh = new THREE.Mesh(floorGeometry, floorMaterial);
+
+    floorMesh.rotation.x = -Math.PI / 2;
+    floorMesh.receiveShadow = true;
+    marker1.add(floorMesh);
+
+
+    /////// OBJ IMPORT/////////////////////
+    function onProgress(xhr) { console.log((xhr.loaded / xhr.total * 100) + "% loaded"); }
+    function onError(xhr) { console.log("ha ocurrido un error") };
+
+    //////OBJETO RHINO 1///////////////
+    new THREE.MTLLoader()
+        .setPath('data/models/')
+        .load('rasengan.mtl', function (materials) {
+            materials.preload();
+            new THREE.OBJLoader()
+                .setMaterials(materials)
+                .setPath('data/models/')
+                .load('rasengan.obj', function (object) {
+                    object.scale.set(0.10, 0.10, 0.10);
+
+                    marker1.add(object);
+                });
+        });
+    
+    //////OBJETO RHINO 2///////////////
+    new THREE.MTLLoader()
+        .setPath('data/models/')
+        .load('rasengan2.mtl', function (materials) {
+            materials.preload();
+            new THREE.OBJLoader()
+                .setMaterials(materials)
+                .setPath('data/models/')
+                .load('rasengan2.obj', function (object) {
+                    object.scale.set(0.10, 0.10, 0.10);
+
+                    marker2.add(object);
+                });
+        });
+
+
+          //////OBJETO RHINO 3///////////////
+    new THREE.MTLLoader()
+    .setPath('data/models/')
+    .load('rasengan3.mtl', function (materials) {
+        materials.preload();
+        new THREE.OBJLoader()
+            .setMaterials(materials)
+            .setPath('data/models/')
+            .load('rasengan3.obj', function (object) {
+                object.scale.set(0.10, 0.10, 0.10);
+
+                marker3.add(object);
+            });
+    });
+
+  //////OBJETO RHINO CHerrys verdes///////////////
+  new THREE.MTLLoader()
+  .setPath('data/models/')
+  .load('verde.mtl', function (materials) {
+      materials.preload();
+      new THREE.OBJLoader()
+          .setMaterials(materials)
+          .setPath('data/models/')
+          .load('verde.obj', function (object) {
+              object.scale.set(0.10, 0.10, 0.10);
+
+              marker4.add(object);
+          });
+  });
+
+   //////OBJETO RHINO 4///////////////
+   new THREE.MTLLoader()
+   .setPath('data/models/')
+   .load('rasengan5.mtl', function (materials) {
+       materials.preload();
+       new THREE.OBJLoader()
+           .setMaterials(materials)
+           .setPath('data/models/')
+           .load('rasengan5.obj', function (object) {
+               object.scale.set(0.15, 0.15, 0.15);
+ 
+               marker5.add(object);
+           });
+   });
+
+    //////OBJETO RHINO 4///////////////
+    new THREE.MTLLoader()
+    .setPath('data/models/')
+    .load('rasengan6.mtl', function (materials) {
+        materials.preload();
+        new THREE.OBJLoader()
+            .setMaterials(materials)
+            .setPath('data/models/')
+            .load('rasengan6.obj', function (object) {
+                object.scale.set(0.15, 0.15, 0.15);
+  
+                marker5.add(object);
+            });
+    });
+     //////OBJETO RHINO 4///////////////
+   new THREE.MTLLoader()
+   .setPath('data/models/')
+   .load('rasengan7.mtl', function (materials) {
+       materials.preload();
+       new THREE.OBJLoader()
+           .setMaterials(materials)
+           .setPath('data/models/')
+           .load('rasengan7.obj', function (object) {
+               object.scale.set(0.15, 0.15, 0.15);
+ 
+               marker5.add(object);
+           });
+   });
+    //////OBJETO RHINO 4///////////////
+    new THREE.MTLLoader()
+    .setPath('data/models/')
+    .load('rasengan8.mtl', function (materials) {
+        materials.preload();
+        new THREE.OBJLoader()
+            .setMaterials(materials)
+            .setPath('data/models/')
+            .load('rasengan8.obj', function (object) {
+                object.scale.set(0.15, 0.15, 0.15);
+  
+                marker5.add(object);
+            });
+    });
+     //////OBJETO RHINO 4///////////////
+   new THREE.MTLLoader()
+   .setPath('data/models/')
+   .load('rasengan9.mtl', function (materials) {
+       materials.preload();
+       new THREE.OBJLoader()
+           .setMaterials(materials)
+           .setPath('data/models/')
+           .load('rasengan9.obj', function (object) {
+               object.scale.set(0.15, 0.15, 0.15);
+ 
+               marker5.add(object);
+           });
+   });
+    //////OBJETO RHINO 4///////////////
+    new THREE.MTLLoader()
+    .setPath('data/models/')
+    .load('rasengan10.mtl', function (materials) {
+        materials.preload();
+        new THREE.OBJLoader()
+            .setMaterials(materials)
+            .setPath('data/models/')
+            .load('rasengan10.obj', function (object) {
+                object.scale.set(0.15, 0.15, 0.15);
+  
+                marker5.add(object);
+            });
+    });
+ 
+   //////OBJETO RHINO ip1 ///////////////
+    new THREE.MTLLoader()
+    .setPath('data/models/')
+    .load('sensor1.mtl', function (materials) {
+        materials.preload();
+        new THREE.OBJLoader()
+            .setMaterials(materials)
+            .setPath('data/models/')
+            .load('sensor1.obj', function (object) {
+                object.scale.set(0.05, 0.05, 0.05);
+  
+                marker9.add(object);
+            });
+    });
+
+       //////OBJETO RHINO ip2///////////////
+       new THREE.MTLLoader()
+       .setPath('data/models/')
+       .load('sensor2.mtl', function (materials) {
+           materials.preload();
+           new THREE.OBJLoader()
+               .setMaterials(materials)
+               .setPath('data/models/')
+               .load('sensor2.obj', function (object) {
+                   object.scale.set(0.02, 0.02, 0.02);
+     
+                   marker10.add(object);
+               });
+       });
+    
+
+          //////OBJETO RHINO op1///////////////
+    new THREE.MTLLoader()
+    .setPath('data/models/')
+    .load('led1.mtl', function (materials) {
+        materials.preload();
+        new THREE.OBJLoader()
+            .setMaterials(materials)
+            .setPath('data/models/')
+            .load('led1.obj', function (object) {
+                object.scale.set(0.05, 0.05, 0.05);
+  
+                marker6.add(object);
+            });
+    });
+ 
+       //////OBJETO RHINO op2///////////////
+       new THREE.MTLLoader()
+       .setPath('data/models/')
+       .load('buzzer1.mtl', function (materials) {
+           materials.preload();
+           new THREE.OBJLoader()
+               .setMaterials(materials)
+               .setPath('data/models/')
+               .load('buzzer1.obj', function (object) {
+                   object.scale.set(0.05, 0.05, 0.05);
+     
+                   marker7.add(object);
+               });
+       });
+       //////OBJETO RHINO op3///////////////
+       new THREE.MTLLoader()
+       .setPath('data/models/')
+       .load('bomba1.mtl', function (materials) {
+           materials.preload();
+           new THREE.OBJLoader()
+               .setMaterials(materials)
+               .setPath('data/models/')
+               .load('bomba1.obj', function (object) {
+                   object.scale.set(0.05, 0.05, 0.05);
+     
+                   marker8.add(object);
+               });
+       });
 
 }
 

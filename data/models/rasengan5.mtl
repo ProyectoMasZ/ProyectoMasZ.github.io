@@ -1,0 +1,40 @@
+# Rhino
+newmtl Metal (1)
+Ka 0.0000 0.0000 0.0000
+Kd 0.0000 0.0000 0.0000
+Ks 0.9529 0.8157 0.5647
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 255.0000
+newmtl Red floral print
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0.0000
+map_Kd Red floral print_100_D.jpg
+newmtl White flower bush
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 0.0000
+map_Kd White flower bush_750_DB.jpg
+map_Bump White flower bush_750_DB.jpg
+newmtl Plastic (1)
+Ka 0.0000 0.0000 0.0000
+Kd 0.3843 0.8471 0.8824
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 0.2704
+Ns 255.0000
+newmtl Tatajuba polished
+Ka 0.0000 0.0000 0.0000
+Kd 1.0000 1.0000 1.0000
+Ks 1.0000 1.0000 1.0000
+Tf 0.0000 0.0000 0.0000
+d 1.0000
+Ns 255.0000
+map_Kd Tatajuba_100_DP.jpg
